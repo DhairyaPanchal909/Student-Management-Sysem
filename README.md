@@ -1,191 +1,64 @@
-# 🎓 Student Management System in C
+# Student Management System in C
 
-A simple and beginner-friendly **Student Management System** developed using the C programming language as a college mini project.
+A console-based **Student Management System** developed in C using binary file handling, structures, modular functions, and input validation. Suitable for college mini-projects, practical lab exams, and beginners learning C programming.
 
-This is a console-based application that helps manage student records. Users can add, display, search, update, and delete student information. It also calculates student results, percentages, and grades.
+---
 
-## 📌 Project Overview
+## 📌 Features
 
-The Student Management System is designed to make student record management simple and organized.
+1. **Add Student**: Add a new student record (ID, Name, Age, Course, and marks in 5 subjects). Prevents duplicate IDs.
+2. **Display All Students**: View formatted details of all registered students.
+3. **Search Student**: Search student details by unique ID.
+4. **Update Student**: Modify existing student name, age, course, and marks in-place.
+5. **Delete Student**: Safely delete a record using temporary file swapping.
+6. **Calculate Result**: Calculate total marks, percentage, pass/fail status, and letter grades (A+ to F).
+7. **Persistent Storage**: All records are stored permanently in a binary file (`students.dat`).
 
-It uses basic C programming concepts such as structures, functions, loops, conditional statements, arrays, and file handling.
+---
 
-## ✨ Features
+## 🛠️ Concepts Used
 
-- **Add Student:** Add new student records with ID, name, age, course, and subject marks.
-- **Display Students:** Display all registered student records.
-- **Search Student:** Find a student using their unique ID.
-- **Update Student:** Modify existing student information.
-- **Delete Student:** Remove a student record using their ID.
-- **Calculate Result:** Calculate total marks, percentage, pass/fail status, and grade.
-- **Permanent Storage:** Save student records using file handling.
-- **Input Validation:** Validate basic student information and marks.
-- **Simple Menu:** Easy-to-use console interface.
+- **Structures (`struct Student`)**: Groups heterogeneous data fields for each student.
+- **File Handling (`fopen`, `fread`, `fwrite`, `fseek`, `remove`, `rename`)**: Binary file operations.
+- **Functions & Modular Programming**: 11 separate functions for specific operations.
+- **Input Validation & Buffer Clearing**: Handling invalid inputs and cleaning stdin buffer.
+- **Control Flow**: `switch-case` menu loop, `if-else` condition checking, and `while`/`for` loops.
 
-## 🛠️ Technologies Used
+---
 
-- Programming Language: C
-- Compiler: GCC
-- Code Editor: Visual Studio Code
-- Application Type: Console-Based
-- Storage: File Handling
+## 💻 How to Compile and Run
 
-## 📚 C Programming Concepts Used
+### Prerequisites
+- GCC Compiler (MinGW / MSYS2 / Linux GCC)
+- Any IDE or text editor (VS Code, Code::Blocks, CLion, Dev-C++)
 
-- Variables and Data Types
-- Structures
-- Arrays
-- Functions
-- Loops
-- If-Else Statements
-- Switch Statements
-- String Handling
-- File Handling
-- Input Validation
-
-## 📂 Project Structure
-
-```text
-Student-Management-System-C/
-│
-├── main.c
-├── students.dat
-└── README.md
-```
-
-**Note:** `students.dat` is automatically created when student records are saved for the first time.
-
-## ⚙️ Installation and Execution
-
-### Step 1: Clone the Repository
-
-Open your terminal and execute:
+### 1. Compile
+Open your terminal/command prompt in this project folder and run:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/Student-Management-System-C.git
+gcc student_management.c -o student_management -Wall
 ```
 
-### Step 2: Open the Project Folder
-
+### 2. Run
 ```bash
-cd Student-Management-System-C
+# On Windows:
+student_management.exe
+
+# On Linux/macOS:
+./student_management
 ```
 
-### Step 3: Compile the Program
+---
 
-Make sure GCC is installed on your system.
+## 📁 Project Structure
 
-```bash
-gcc main.c -o student
+```
+├── student_management.c                # Main C source code
+├── README.md                           # Documentation & instructions
+└── Student_Management_System_Report.md # Full project report, algorithms, flowcharts & viva Q&A
 ```
 
-### Step 4: Run the Program
+---
 
-**For Windows:**
-
-```bash
-student.exe
-```
-
-**For Linux / macOS:**
-
-```bash
-./student
-```
-
-## 🖥️ Application Menu
-
-When you run the program, the following menu appears:
-
-```text
-=========================================
-       STUDENT MANAGEMENT SYSTEM
-       College Mini Project in C
-=========================================
-
------------------------------------------
-              MAIN MENU
------------------------------------------
-  1. Add Student
-  2. Display All Students
-  3. Search Student
-  4. Update Student
-  5. Delete Student
-  6. Calculate Result
-  7. Exit
------------------------------------------
-
-Enter your choice (1-7):
-```
-
-## 📊 Student Information
-
-The application stores the following information:
-
-| Field | Description |
-|---|---|
-| Student ID | Unique student identification number |
-| Name | Student's full name |
-| Age | Student's age |
-| Course | Enrolled course |
-| Marks | Marks in five subjects |
-
-## 📝 Result Calculation
-
-The application calculates:
-
-- Total Marks
-- Percentage
-- Pass or Fail Status
-- Student Grade
-
-**Passing Criteria:** 40%
-
-**Grade Criteria:**
-
-| Percentage | Grade |
-|---|---|
-| 90% and above | A+ |
-| 80% - 89% | A |
-| 70% - 79% | B |
-| 60% - 69% | C |
-| 40% - 59% | D |
-| Below 40% | F |
-
-## 🎯 Project Objectives
-
-1. Understand the fundamentals of C programming.
-2. Learn how to use structures to store student information.
-3. Understand functions and modular programming.
-4. Practice file handling for permanent data storage.
-5. Perform basic CRUD operations.
-6. Develop a simple real-world console application.
-
-## 🚀 Future Improvements
-
-- Add a graphical user interface.
-- Add student login functionality.
-- Generate student report cards.
-- Add subject names dynamically.
-- Improve input validation.
-- Export student records to a text or CSV file.
-
-## 🎓 Academic Information
-
-**Project Name:** Student Management System
-
-**Subject:** Computer Programming with C
-
-**Project Type:** College Mini Project
-
-**Language:** C Programming
-
-**Level:** Beginner
-
-## 👨‍💻 Author
-
-Developed as a college mini project to practice and understand the fundamentals of C programming.
-
-## 📜 License
-
-This project is open-source and available for educational and learning purposes.
+## 👤 Author
+- GitHub: [@DhairyaPanchal909](https://github.com/DhairyaPanchal909)
